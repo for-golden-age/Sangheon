@@ -1,0 +1,71 @@
+.TodoContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  box-sizing: border-box;
+
+  .head {
+    display: flex;
+    align-items: center;
+  }
+
+  .todo-list {
+    list-style: none;
+    display: inline-flex;
+    flex-direction: column;
+
+    > li {
+      display: inline-flex;
+      width: auto;
+      margin: 8px 0;
+      border-bottom: 1px solid black;
+      padding: 8px 0;
+
+      p {
+        &:not(:first-child) {
+          margin: 0 16px;
+        }
+      }
+    }
+
+    > ul {
+      margin-left: 8px;
+    }
+  }
+
+  .create-button {
+    display: inline-block;
+    width: 90px;
+    background: transparent;
+    border: none;
+    border-radius: 16px;
+    border: solid 1px #f76252;
+    color: #f76252;
+    padding: 6px 0;
+    margin-left: auto;
+  }
+
+  &--form {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 0 16px;
+    background-color: red;
+    width: 75%;
+    max-width: 300px;
+    height: 100%;
+    animation: right-to-left 0.5s;
+  }
+}
+
+@keyframes right-to-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

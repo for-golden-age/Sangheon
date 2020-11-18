@@ -87,5 +87,3 @@ class Sample {
     }
   }
 ```
-
-> resolve된 결과와 reject되어 나온 에러에 대해서 Readonly 유틸리티 클래스를 적용함으로써 조금더 안전해졌다
